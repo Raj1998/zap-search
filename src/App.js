@@ -4,38 +4,40 @@ import {
   Switch,
   Route,
   Link,
-  withRouter
+  useParams,
+  useRouteMatch
 } from "react-router-dom";
 
-function App() {
+// Since routes are regular React components, they
+// may be rendered anywhere in the app, including in
+// child elements.
+//
+// This helps when it's time to code-split your app
+// into multiple bundles because code-splitting a
+// React Router app is the same as code-splitting
+// any other React app.
+
+export default function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-          </ul>
-        </nav>
+        <ul>
+          <li>
+            <Link to="/zap-search">Home</Link>
+          </li>
+          <li>
+            <Link to="/zap-search">Topics</Link>
+          </li>
+        </ul>
 
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
+        <hr />
+
         <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/users">
-            <Users />
-          </Route>
-          <Route path="/">
+          <Route exact path="/zap">
             <Home />
+          </Route>
+          <Route path="/zap-search">
+            <Topics />
           </Route>
         </Switch>
       </div>
@@ -44,15 +46,56 @@ function App() {
 }
 
 function Home() {
-  return <h2>Home</h2>;
+  return (
+    <div>
+      <h2>Home</h2>
+    </div>
+  );
 }
 
-function About() {
-  return <h2>About</h2>;
+function Topics() {
+  // The `path` lets us build <Route> paths that are
+  // relative to the parent route, while the `url` lets
+  // us build relative links.
+  let { path, url } = useRouteMatch();
+
+  return (
+    <div>
+      <h2>Topics</h2>
+      <ul>
+        <li>
+          <Link to={`${url}/rendering`}>Rendering with React</Link>
+        </li>
+        <li>
+          <Link to={`${url}/components`}>Components</Link>
+        </li>
+        <li>
+          <Link to={`${url}/props-v-state`}>Props v. State</Link>
+        </li>
+      </ul>
+
+      <Switch>
+        <Route exact path={path}>
+          <h3>Please select a topic.</h3>
+        </Route>
+        <Route path={`${path}/:topicId`}>
+          <Topic />
+        </Route>
+      </Switch>
+    </div>
+  );
 }
 
-function Users() {
-  return <h2>Users</h2>;
-}
+function Topic() {
+  // The <Route> that rendered this component has a
+  // path of `/topics/:topicId`. The `:topicId` portion
+  // of the URL indicates a placeholder that we can
+  // get from `useParams()`.
+  let { topicId } = useParams();
 
-export default App
+  return (
+    <div>
+      <h3>{topicId}</h3>
+    </div>
+  );
+}
