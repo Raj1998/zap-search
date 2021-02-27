@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  RouteHandler,
   Link,
   useParams,
   useRouteMatch
@@ -19,29 +20,7 @@ import {
 
 export default function App() {
   return (
-    <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/zap-search">Home</Link>
-          </li>
-          <li>
-            <Link to="/zap-search">Topics</Link>
-          </li>
-        </ul>
-
-        <hr />
-
-        <Switch>
-          <Route exact path="/zap">
-            <Home />
-          </Route>
-          <Route path="/zap-search">
-            <Topics />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+      <div>Added </div>
   );
 }
 
@@ -76,7 +55,7 @@ function Topics() {
 
       <Switch>
         <Route exact path={path}>
-          <h3>Please select a topic.</h3>
+          <h3>Please select ba topic.</h3>
         </Route>
         <Route path={`${path}/:topicId`}>
           <Topic />
