@@ -6,3 +6,18 @@
 html {
   scroll-behavior: smooth;
 }
+
+.header {
+  position: fixed;
+  width: 100%;
+  background: #fff;
+}
+
+.content {
+  position: fixed;
+  top: 68px;
+  width: 100%;
+  height: calc(100vh - 68px);
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
