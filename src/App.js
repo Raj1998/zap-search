@@ -1,5 +1,6 @@
 import React from "react";
-
+import Features from "./Components/Features";
+import Footer from "./Components/Footer"
 
 export default function App() {
     return (
@@ -14,8 +15,8 @@ export default function App() {
                         <span class="ml-3 text-xl">ZapSearch ⚡️</span>
                     </a>
                     <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                        <a class="mr-5 hover:text-gray-900">First Link</a>
-                        <a class="mr-5 hover:text-gray-900">Second Link</a>
+                        <a class="mr-5 hover:text-gray-900" href="#feat">Features</a>
+                        <a class="mr-5 hover:text-gray-900">Feedback</a>
                     </nav>
                 </div>
             </header>
@@ -30,15 +31,17 @@ export default function App() {
                         <br class="hidden lg:inline-block" />
                     </h1>
                     <p class="mb-8 leading-relaxed">Spotlight Search for Chrome. The ⚡️ Blazing fast ⚡️ search for Bookmarks, History and Special commands.</p>
-                    <p class="mb-8 leading-relaxed">Comming Soon on Chrome Web Store</p>
+                    <p class="mb-8 leading-relaxed">Available on Chrome Web Store</p>
                     <div class="flex justify-center">
                         <button style={{    "background-color": "#929a25" }} class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-                        <img src="img/download.png" style={{"height": "44px"}} alt=""/>
+                        <a href="https://chrome.google.com/webstore/detail/zapsearch-%E2%9A%A1%EF%B8%8F/bfgpphnadhhfdbkjcbjolignifapccdh?utm_source=chrome-ntp-icon" target="_blank"> <img src="img/download.png" style={{"height": "44px"}} alt=""/> </a>
                     </div>
                     </div>
                 </div>
-                </div>
+            </div>
 
+            <Features />
+            <Footer />
             
         </div>
     );
