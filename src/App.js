@@ -1,6 +1,7 @@
 import React from "react";
 import Features from "./Components/Features";
 import Footer from "./Components/Footer"
+import Help from "./Components/Help"
 
 export default function App(props) {
     return (
@@ -15,9 +16,10 @@ export default function App(props) {
                         <span className="ml-3 text-xl">ZapSearch ⚡️</span>
                     </a>
                     <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                        <a className="mr-5 hover:text-gray-900" href="#feat">Features</a>
+                        <a className="mr-5 hover:text-gray-900" href="#features">Features</a>
                         <a className="mr-5 hover:text-gray-900" href="#help">Help</a>
                         <a className="mr-5 hover:text-gray-900" href="#feedback">Feedback</a>
+                        <a className="mr-5 hover:text-gray-900" href="#footer">Contact</a>
                         <a className="mr-5 hover:text-gray-900" href="#top"> ⬆️ </a>
                     </nav>
                 </div>
@@ -45,9 +47,7 @@ export default function App(props) {
             </div>
 
             <Features />
-            <div id="help">
-                <h1>How to use </h1>
-            </div>
+            <Help />
             <iframe id="feedback" src="https://docs.google.com/forms/d/e/1FAIpQLSdSmgy-dGXho28JD6ajrWmU-15xU5v6rmE-m1FG5azxc8dEgA/viewform?embedded=true" width="100%" height="1100" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             <Footer />
 
