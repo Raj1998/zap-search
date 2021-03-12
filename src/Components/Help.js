@@ -26,7 +26,7 @@ export default function Help() {
                 <div className='bg-gray-100 p-6 rounded-lg'>
                   <img
                     className='h-40 rounded w-full object-cover object-center mb-6'
-                    src='img/help/1.png'
+                    src='img/1.png'
                     alt='content'
                   />
                   <h3 className='tracking-widest text-indigo-500 text-xs font-medium title-font'>
@@ -45,7 +45,7 @@ export default function Help() {
                 <div className='bg-gray-100 p-6 rounded-lg'>
                   <img
                     className='h-40 rounded w-full object-cover object-center mb-6'
-                    src='img/help/2.png'
+                    src='img/2.png'
                     alt='content'
                   />
                   <h3 className='tracking-widest text-indigo-500 text-xs font-medium title-font'>
@@ -64,7 +64,7 @@ export default function Help() {
                 <div className='bg-gray-100 p-6 rounded-lg'>
                   <img
                     className='h-40 rounded w-full object-cover object-center mb-6'
-                    src='img/help/3.png'
+                    src='img/3.png'
                     alt='content'
                   />
                   <h3 className='tracking-widest text-indigo-500 text-xs font-medium title-font'>
@@ -83,7 +83,7 @@ export default function Help() {
                 <div className='bg-gray-100 p-6 rounded-lg'>
                   <img
                     className='h-40 rounded w-full object-cover object-center mb-6'
-                    src='img/help/4.png'
+                    src='img/4.png'
                     alt='content'
                   />
                   <h3 className='tracking-widest text-indigo-500 text-xs font-medium title-font'>
