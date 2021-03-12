@@ -37,10 +37,11 @@ export default function App(props) {
                         <br className="hidden lg:inline-block" />
                     </h1>
                     <p className="mb-8 leading-relaxed">Spotlight Search for Chrome. The ⚡️ Blazing fast ⚡️ search for Bookmarks, History and Special commands.</p>
-                    <p className="mb-8 leading-relaxed">Available on Chrome Web Store</p>
+                    <h2 className="mb-8 leading-relaxed">Available on Chrome Web Store. Download Now:</h2>
+                    <h1 className="text-2xl"><a href="https://chrome.google.com/webstore/detail/zapsearch-%E2%9A%A1%EF%B8%8F/bfgpphnadhhfdbkjcbjolignifapccdh?utm_source=chrome-ntp-icon" target="_blank">Click Here To Download </a></h1>
                     <div className="flex justify-center">
                         {/* <button style={{    "background-color": "#929a25" }} className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button> */}
-                        <a href="https://chrome.google.com/webstore/detail/zapsearch-%E2%9A%A1%EF%B8%8F/bfgpphnadhhfdbkjcbjolignifapccdh?utm_source=chrome-ntp-icon" target="_blank"> <img src="img/download.png" style={{"height": "44px"}} alt=""/> </a>
+                        <a href="https://chrome.google.com/webstore/detail/zapsearch-%E2%9A%A1%EF%B8%8F/bfgpphnadhhfdbkjcbjolignifapccdh?utm_source=chrome-ntp-icon" target="_blank"> <img src="img/download.png" style={{"height": "90px"}} alt=""/> </a>
                     </div>
                     </div>
                 </div>
