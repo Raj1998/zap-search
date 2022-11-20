@@ -2,6 +2,7 @@ import React from "react";
 import Features from "./Components/Features";
 import Footer from "./Components/Footer"
 import Help from "./Components/Help"
+import ChangeLogs from "./Components/ChangeLogs"
 
 export default function App(props) {
     return (
@@ -48,6 +49,7 @@ export default function App(props) {
             </div>
 
             <Features />
+            <ChangeLogs />
             <Help />
             <iframe id="feedback" src="https://docs.google.com/forms/d/e/1FAIpQLSdSmgy-dGXho28JD6ajrWmU-15xU5v6rmE-m1FG5azxc8dEgA/viewform?embedded=true" width="100%" height="1100" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             <Footer />
