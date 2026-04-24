@@ -17,6 +17,18 @@ export default function ChangeLogs() {
 <br />
 
                         <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                            v0.3.0
+                        </h2>
+                        <ul class="space-y-1 max-w-md list-disc list-inside text-gray-500 dark:text-gray-400">
+                            <li>
+                                major UI change
+                            </li>
+                            <li>
+                                Bug fixes
+                            </li>
+                        </ul>
+
+                        <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
                             v0.2.0
                         </h2>
                         <ul class="space-y-1 max-w-md list-disc list-inside text-gray-500 dark:text-gray-400">
